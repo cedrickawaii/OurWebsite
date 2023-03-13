@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="logo.png" class="logo">
+            <div><h1>Contact Us</h1></div>
+            <ul>
+                <li><a href="" class="active"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="sub-container">
+            <div class="teams">
+                <img src="abucejo.jpg" alt="">
+                <div class="name">John Cedric Abucejo</div>
+                <div class="section">BSIT - IT2R3</div>
+
+                <div class="contact">
+                    <div class="sub-contact">
+                        <form onsubmit="sendEmail(); reset(); return false;">
+                            <h2>Send Message</h2>
+                            <div class="inputbox">
+                                <input type="text" name="" required="required">
+                                <span>Full Name</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" name="" required="required">
+                                <span>Email</span>
+                            </div>
+                            <div class="inputbox">
+                                <textarea required="required"></textarea>
+                                <span>Type Your Message...</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="submit" name="" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="teams">
+                <img src="baylon.jpg" alt="">
+                <div class="name">Frans Szendrei Baylon</div>
+                <div class="section">BSIT - IT2R3</div>
+
+                <div class="contact">
+                    <div class="sub-contact">
+                        <form onsubmit="sendMail()(); reset(); return false;">
+                            <h2>Send Message</h2>
+                            <div class="inputbox">
+                                <input type="text" name="" required="required">
+                                <span>Full Name</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="text" name="" required="required">
+                                <span>Email</span>
+                            </div>
+                            <div class="inputbox">
+                                <textarea required="required"></textarea>
+                                <span>Type Your Message...</span>
+                            </div>
+                            <div class="inputbox">
+                                <input type="submit" name="" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host:"smtp.gmail.com",
+                Username:"abucejo.johncedric@gmail.com",
+                Password:"",
+                To:'abucejo.johncedric@gmail.com',
+                From: document.getElementById("email").value,
+                Subject:"New Enquiry",
+                Body:"Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone No.: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert(Success)
+            );
+        }
+    </script>
+    <script>
+        function sendMail(){
+            Email.send({
+                Host:"smtp.gmail.com",
+                Username:"baylonfrans5@gmail.com",
+                Password:"",
+                To:'baylonfrans5@gmail.com',
+                From: document.getElementById("email").value,
+                Subject:"New Enquiry",
+                Body:"Name: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone No.: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert(Success)
+            );
+        }
+    </script>
+</body>
+</html>
