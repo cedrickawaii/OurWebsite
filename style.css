@@ -41,7 +41,7 @@
     padding: 20px 100px;
     background: #ff4500;
     border-radius: 25px;
-    position: relative;
+    position: auto;
     top: 350px;
     left: 830px;
     font-weight: bold;
@@ -49,7 +49,7 @@
     background: transparent;
     cursor: pointer;
     color: #ffffff;
-    position: relative;
+    position: auto;
     transition: 0.6s ease;
 }
 
