@@ -36,28 +36,6 @@
     cursor: pointer;
 }
 
-.banner button{
-    font-size: 20px;
-    padding: 20px 100px;
-    background: #ff4500;
-    border-radius: 25px;
-    position: auto;
-    top: 350px;
-    left: 830px;
-    font-weight: bold;
-    border: 2px solid #000000;
-    background: transparent;
-    cursor: pointer;
-    color: #ffffff;
-    position: auto;
-    transition: 0.6s ease;
-}
-
-.banner button:hover{
-    background-color: #000000;
-    color: #ff4500;
-}
-
 .navbar ul li{
     list-style: none;
     display: inline-block;
